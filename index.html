@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Моя библиотека</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Georgia', serif;
+        }
+        
+        body {
+            background-color: #f5f0e6;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #8b4513;
+        }
+        
+        h1 {
+            color: #5d2906;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        .intro {
+            text-align: center;
+            font-style: italic;
+            margin-bottom: 40px;
+            color: #666;
+        }
+        
+        .books-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+        
+        .book-card {
+            background: #fffaf0;
+            border: 1px solid #e6d5b8;
+            border-radius: 8px;
+            padding: 20px;
+            transition: transform 0.3s;
+        }
+        
+        .book-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+        }
+        
+        .book-card h3 {
+            color: #8b4513;
+            margin-bottom: 10px;
+            font-size: 1.3em;
+        }
+        
+        .book-author {
+            color: #b8860b;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .book-description {
+            font-size: 0.95em;
+            color: #555;
+        }
+        
+        .category {
+            background-color: #8b4513;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 0.8em;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+            color: #777;
+            font-size: 0.9em;
+        }
+        
+        @media (max-width: 768px) {
+            .books-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .container {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📚 Моя библиотека</h1>
+            <p>Коллекция книг, которые тронули мою душу</p>
+        </header>
+        
+        <div class="intro">
+            <p>"Книги — это двери, которые ведут в другие миры, и зеркала, в которых мы видим себя."</p>
+        </div>
+        
+        <div class="books-grid">
+            <!-- КНИГА 1 -->
+            <div class="book-card">
+                <div class="category">Фэнтези</div>
+                <h3>Властелин Колец</h3>
+                <div class="book-author">Дж. Р. Р. Толкин</div>
+                <p class="book-description">Эпическая история о Средиземье, хоббитах и борьбе добра со злом. Книга, определившая жанр фэнтези.</p>
+            </div>
+            
+            <!-- КНИГА 2 -->
+            <div class="book-card">
+                <div class="category">Классика</div>
+                <h3>Мастер и Маргарита</h3>
+                <div class="book-author">Михаил Булгаков</div>
+                <p class="book-description">Гениальный роман о добре и зле, любви и творчестве, где реальность переплетается с мистикой.</p>
+            </div>
+            
+            <!-- КНИГА 3 -->
+            <div class="book-card">
+                <div class="category">Научная фантастика</div>
+                <h3>Автостопом по галактике</h3>
+                <div class="book-author">Дуглас Адамс</div>
+                <p class="book-description">Остроумная и абсурдная история о путешествиях по космосу, полная философского юмора.</p>
+            </div>
+            
+            <!-- КНИГА 4 -->
+            <div class="book-card">
+                <div class="category">Философия</div>
+                <h3>Так говорил Заратустра</h3>
+                <div class="book-author">Фридрих Ницше</div>
+                <p class="book-description">Философская поэма о сверхчеловеке, вечном возвращении и переоценке всех ценностей.</p>
+            </div>
+            
+            <!-- КНИГА 5 -->
+            <div class="book-card">
+                <div class="category">Детектив</div>
+                <h3>Убийство в "Восточном экспрессе"</h3>
+                <div class="book-author">Агата Кристи</div>
+                <p class="book-description">Блестящий детектив с неожиданной развязкой. Один из лучших романов королевы жанра.</p>
+            </div>
+            
+            <!-- КНИГА 6 -->
+            <div class="book-card">
+                <div class="category">Психология</div>
+                <h3>Сила настоящего</h3>
+                <div class="book-author">Экхарт Толле</div>
+                <p class="book-description">Книга о важности жизни в настоящем моменте и освобождении от тирании ума.</p>
+            </div>
+        </div>
+        
+        <footer>
+            <p>© 2023 Моя библиотека. Все права на книги принадлежат их авторам.</p>
+            <p>Обновлено: декабрь 2023</p>
+        </footer>
+    </div>
+</body>
+</html>
+<div class="book-card">
+    <div class="category">ВАШ ЖАНР</div>
+    <h3>ВАША ЛЮБИМАЯ КНИГА</h3>
+    <div class="book-author">АВТОР КНИГИ</div>
+    <p class="book-description">Ваше описание книги, почему она вам нравится.</p>
+</div>
